@@ -1,25 +1,16 @@
-package com.SupplierService.supplierMicroservice.entity;
+package com.example.Product.client;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "suppliers")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Data
 public class Supplier {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long supplierId;
+    private Long productId;
     private String name;
     private String contactInfo;
     private String address;
-    private Long productId;
-
-
 }

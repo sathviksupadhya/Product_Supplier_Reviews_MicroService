@@ -57,5 +57,10 @@ public class supplierController {
         supplierService.deleteSupplier(supplierId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+    @GetMapping("/{productId}/details")
+    public ResponseEntity<Supplier> getSupplierByProductId(@PathVariable Long productId) {
+        Supplier supplier = supplierService.getSupplierByProductId(productId);
+        return ResponseEntity.ok(supplier);
+    }
 
 }

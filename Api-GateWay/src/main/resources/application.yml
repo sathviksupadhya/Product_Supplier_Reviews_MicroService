@@ -30,6 +30,10 @@ spring:
           uri: http://localhost:9093
           predicates:
             - Path=/reviews/**
+      routes[0]:
+        filters[0]: AuthenticationFilter
+      routes[1]:
+        filters[0]: AuthenticationFilter
 
 
 #  spring:

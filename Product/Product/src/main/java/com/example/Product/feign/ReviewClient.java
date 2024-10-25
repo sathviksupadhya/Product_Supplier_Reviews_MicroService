@@ -13,8 +13,5 @@ public interface ReviewClient {
     @GetMapping("/reviews/product/{productId}")
     List<Reviews> getReviewsByProductId(@PathVariable("productId") Long productId);
 
-    // Add other review-related endpoints as needed
-//    @GetMapping("/reviews/product/{productName}")
-//    List<Reviews> getReviewsByProductName(@PathVariable("productName") String productName);
-//}
+
 }

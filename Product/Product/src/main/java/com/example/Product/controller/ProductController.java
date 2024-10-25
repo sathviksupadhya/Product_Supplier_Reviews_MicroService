@@ -2,6 +2,7 @@ package com.example.Product.controller;
 
 import com.example.Product.client.FullResponse;
 import com.example.Product.client.Reviews;
+import com.example.Product.client.Supplier;
 import com.example.Product.model.Product;
 import com.example.Product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,9 +55,20 @@ public class ProductController {
 //        }
 //        return new ResponseEntity<>(reviews, HttpStatus.OK);
 //    }
-    @GetMapping("/reviews/product/{productId}")
-    public ResponseEntity<FullResponse> getReviews(@PathVariable("productId") Long productId) {
-        FullResponse reviews = productService.getFullResponse(productId);
-        return new ResponseEntity<>(reviews, HttpStatus.OK);
-    }
+//    @GetMapping("/reviews/product/{productId}")
+//    public ResponseEntity<FullResponse> getReviews(@PathVariable("productId") Long productId) {
+//        FullResponse reviews = productService.getFullResponse(productId);
+//        return new ResponseEntity<>(reviews, HttpStatus.OK);
+//    }
+
+//    @GetMapping("/{productId}/supplier")
+//    public ResponseEntity<Supplier> getSupplierByProductId(@PathVariable Long productId) {
+//        Supplier supplier = productService.getSupplierByProductId(productId);
+//        return ResponseEntity.ok(supplier);
+//    }
+    @GetMapping("/{productId}/details")
+    public ResponseEntity<FullResponse> getFullProductDetails(@PathVariable Long productId) {
+        FullResponse fullResponse = productService.getFullResponse(productId);
+        return ResponseEntity.ok(fullResponse);
+}
 }

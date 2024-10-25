@@ -1,5 +1,6 @@
 package com.example.Product.model;
 
+import com.example.Product.client.Supplier;
 import jakarta.persistence.*;
 
 import jakarta.validation.constraints.*;
@@ -27,6 +28,8 @@ public class Product {
     @NotNull(message="Price is mandatory")
     @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than 0")
     private double price;
+
+   
 
     //@Min(value=0,message="Quantity cannot be less than 0")
     //private int quantity;

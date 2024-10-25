@@ -16,5 +16,10 @@ public class FullResponse {
     private double price;
     //private int quantity;
     public List<Reviews> reviews;
+    public Supplier supplier;
 
+  //getter setter for supplier
+
+    public Supplier getSupplier() { return supplier; }
+    public void setSupplier(Supplier supplier) { this.supplier = supplier; }
 }

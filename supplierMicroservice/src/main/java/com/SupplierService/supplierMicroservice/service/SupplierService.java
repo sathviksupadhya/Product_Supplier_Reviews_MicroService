@@ -44,5 +44,8 @@ public class SupplierService {
     public Supplier createSupplier(Supplier supplier) {
         return supplierRepo.save(supplier);
     }
+    public Supplier getSupplierByProductId(Long productId) {
+        return supplierRepo.findByProductId(productId);
+    }
 
 }
